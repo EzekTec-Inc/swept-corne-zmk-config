@@ -31,20 +31,30 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+// -----------------------------------------------------------------------------------------
+// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | LCTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | NUM LYR |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp EQUAL    &kp BSPC
-   &kp SQT   &kp A &kp R &kp S &hm LCMD T &kp G   &kp M &hm LCMD N  &kp E     &kp I   &kp O       &kp RET
-   &kp TAB &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT   &kp SEMI   &kp FSLH 
-                  &kp LCMD &kp LSHFT &kp LCTRL   &to SYMBOLS_L &kp SPACE &to NUMBERS_L
+   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp TAB &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp &mo 2
+                  &kp LGUI &mo 3 &mt RET RALT   &mt SPACE LSHIFT &mo 1 &kp RALT
                         >;
                 };
 
                 symbols_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp ESC    &kp EXCL       &kp AT       &kp HASH       &kp DLLR       &kp PRCNT         &kp CARET   &kp AMPS   &kp STAR &kp MINUS  &none &kp BSPC
-   &kp GRAVE &none &none &none &none &kp PLUS        &kp HOME &kp LBRC &kp RBRC &kp END &kp BSLH &kp RET
-   &kp TAB   &none &none &none &none &kp MINUS        &kp LBKT   &kp LPAR   &kp RPAR &kp RBKT &none &to ARROWS_L
-                     &kp LCMD &kp LSHFT &to DEFAULT_L     &none &kp SPACE  &to NUMBERS_L
+   &kp  TAB  &kp EXCL &kp AT &kp LBRC &kp RBRC &kp PIPE   	&kp QMARK &kp UNDER  &kp BSLH    &kp ASTRK &none &kp BSPC
+   &kp LCTRL &kp HASH &kp DLLR &kp LPAR &kp RPAR &kp GRAVE      &kp PLUS &kp MINUS &kp FSLH     &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &kp PRCNT &kp CARET &kp LBKT &kp RBKT &kp TILDE    &kp AMPS &kp EQUAL &kp COMMA   &kp DOT &kp NON_US_BSLH &none
+                    	     &kp LGUI &trans   &kp BSPC   &none   &trans    &kp RALT
                         >;
                 };
 
